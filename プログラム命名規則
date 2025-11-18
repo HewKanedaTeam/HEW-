@@ -17,12 +17,13 @@ Player<-〇
 CPLayer<-✕
 
 enumの宣言する時は大文字始め2文字目以降は小文字
-中身はすべて大文字
-enum Scene{
-  TITLE,
-  GAME,
-  RESULT,
-}
+中身はすべて大文字でアンダーバー使おう
+enum TetriminoRotate // テトリミノの回転
+{
+	ROTATE_RIGHT,
+	ROTATE_LEFT,
+};
+
 メンバ変数
 m_〇〇〇
 
@@ -31,6 +32,7 @@ m_〇〇〇
 #define STAGE_X		(10)	// 横のマス数
 #define STAGE_Y		(20)	// 縦のマス数
 #define BLOCK_SIZE	(22)	// 1マスのサイズ
+
 
 
 
