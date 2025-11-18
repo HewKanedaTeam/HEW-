@@ -1,13 +1,9 @@
-uuu
-bhghk
-
-
-
-運命の扉をこじ開けて
-
+関数と変数の命名規則
+関数は大文字始め、変数は小文字スタート。二単語以上の場合二単語目から大文字
 
 class love
 {
     private:
         void Morigaminson(void);
 }
+
