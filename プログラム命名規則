@@ -22,6 +22,8 @@ enum Scene{
   GAME,
   RESULT,
 }
+メンバ変数
+m_〇〇〇
 
 
 
