@@ -15,8 +15,13 @@ Double_jump<-✕
 Player<-〇
 CPLayer<-✕
 
-
-
+enumの宣言する時は大文字始め2文字目以降は小文字
+中身はすべて大文字
+enum Scene{
+  TITLE,
+  GAME,
+  RESULT,
+}
 
 
 
