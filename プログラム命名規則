@@ -2,14 +2,15 @@
 関数は大文字始め、変数は小文字スタート。二単語以上の場合二単語目から大文字
 
 変数名
-jump
-doubleJump
-double_jump
+jump<-〇
+doubleJump<-〇
+double_jump<-✕
 
 関数名　最初
-Jump()
-DoubleJump
-Double_jump
+Jump()<-〇
+DoubleJump<-〇
+Double_jump<-✕
+
 
 
 
