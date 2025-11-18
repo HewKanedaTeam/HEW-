@@ -5,3 +5,9 @@ bhghk
 
 運命の扉をこじ開けて
 
+
+class love
+{
+    private:
+        void Morigaminson(void);
+}
