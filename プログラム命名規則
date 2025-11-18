@@ -4,6 +4,7 @@
 class love
 {
     private:
-        void Morigaminson(void);
+        void Morigaminson
 }
+
 
