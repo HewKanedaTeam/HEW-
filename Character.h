@@ -1,5 +1,6 @@
 #pragma once
-class Character
+#include"Object.h"
+class Character :public Object
 {
 protected:
 	int hp;
@@ -12,4 +13,5 @@ public:
 	virtual void Attack()=0;
 	virtual void Jump()=0;
 };
+
 
