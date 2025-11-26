@@ -3,17 +3,27 @@
 
 enum EnemyState
 {
-	STY,//’Êí
-	JUMP,//ƒWƒƒƒ“ƒv’†
-	STAN,//ƒXƒ^ƒ“’†
-	ATTACK,//ƒAƒ^ƒbƒN’†
-	HIT,//ÚG’†
-	CONTACT,//”­Œ©’†
-	RIGHT,//‰EŒü‚¢‚Ä‚é
-	LIGHT//¶Œü‚¢‚Ä‚é
+	STY,//é€šå¸¸
+	JUMP,//ã‚¸ãƒ£ãƒ³ãƒ—ä¸­
+	STAN,//ã‚¹ã‚¿ãƒ³ä¸­
+	ATTACK,//ã‚¢ã‚¿ãƒƒã‚¯ä¸­
+	HIT,//æ¥è§¦ä¸­
+	CONTACT,//ç™ºè¦‹ä¸­
+	RIGHT,//å³å‘ã„ã¦ã‚‹
+	LIGHT//å·¦å‘ã„ã¦ã‚‹
 };
 class Enemy :public Character
 {
-
+protected:
+	int hp;
+	bool isGround;
+	bool isNoDamage;
+private:
+	bool isContact;
+public:
+	void Move();
+	void HitCheck();
+	void Attack();
+	void Jump();
 };
 
