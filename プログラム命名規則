@@ -33,7 +33,14 @@ m_〇〇〇
 #define STAGE_Y		(20)	// 縦のマス数
 #define BLOCK_SIZE	(22)	// 1マスのサイズ
 
-
+名前空間は全部小文字
+namespace hewstd{
+struct MakeFloat2
+{
+	float x;
+	float y;
+};
+}
 
 
 
