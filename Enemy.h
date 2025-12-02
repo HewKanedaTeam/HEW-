@@ -1,29 +1,37 @@
 #pragma once
-#include "Character.h"
+#include"Character.h"
+
 
 enum EnemyState
 {
-	STY,//通常
-	JUMP,//ジャンプ中
-	STAN,//スタン中
-	ATTACK,//アタック中
-	HIT,//接触中
-	CONTACT,//発見中
-	RIGHT,//右向いてる
-	LIGHT//左向いてる
+	STY,
+	JUMP,
+	STAN,
+	ATTACK,
+	CONTACT,
+	RIGHT,
+	LEFT
 };
+
 class Enemy :public Character
 {
-protected:
+private:
 	int hp;
 	bool isGround;
 	bool isNoDamage;
-private:
+	EnemyState state;
+	Object Enemy;
 	bool isContact;
-public:
-	void Move();
-	void HitCheck();
-	void Attack();
-	void Jump();
-};
+	int speed;
+	int gravity;
 
+public:
+	void Init()override;
+	void Update()override;
+	void Draw()override;
+	void UnInit()override;
+
+	void Move()override;
+	void Attack()override;
+	void Jump()override;
+};
