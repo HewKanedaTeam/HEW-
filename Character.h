@@ -1,6 +1,6 @@
 #pragma once
 #include"Object.h"
-class Character :public Object
+class Character
 {
 protected:
 	int hp;
@@ -8,10 +8,13 @@ protected:
 	bool isNotDamage;
 
 public:
-	virtual void Move()=0;
-	virtual void HitCheck()=0;
-	virtual void Attack()=0;
-	virtual void Jump()=0;
-};
+	virtual void Init();
+	virtual void Update();
+	virtual void Draw();
+	virtual void UnInit();
 
+	virtual void Move() = 0;
+	virtual void Attack() = 0;
+	virtual void Jump() = 0;
+};
 
