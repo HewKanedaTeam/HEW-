@@ -21,5 +21,5 @@ struct ColRes
 
 //長方形(AABB)での接触判定、返り値はbool型の接触しているか、enumでAがBに接触した方向
 ColRes CollisionRect(const Object& a, const Object& b); // オブジェクト同士の判定
-ColRes CollisionRect(const Object& a, hstd::MakeFloat2& bPos, const hstd::MakeFloat2& bSize); // オブジェクトと座標・サイズで判定
-ColRes CollisionRect(const hstd::MakeFloat2& aPos, const hstd::MakeFloat2& aSize, const hstd::MakeFloat2& bPos, const hstd::MakeFloat2& bSize); // 座標・サイズ同士で判定
+ColRes CollisionRect(const Object& a, MakeFloat2& bPos, const MakeFloat2& bSize); // オブジェクトと座標・サイズで判定
+ColRes CollisionRect(const MakeFloat2& aPos, const MakeFloat2& aSize, const MakeFloat2& bPos, const MakeFloat2& bSize); // 座標・サイズ同士で判定

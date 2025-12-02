@@ -6,10 +6,10 @@ ColRes CollisionRect(const Object& a, const Object& b)
 	ColRes colres{ false, ColDir::NONE };
 
 	// オブジェクトの座標とサイズを取得
-	hstd::MakeFloat2 aPos = a.GetPos();
-	hstd::MakeFloat2 bPos = b.GetPos();
-	hstd::MakeFloat2 aSize = a.GetSize();
-	hstd::MakeFloat2 bSize = b.GetSize();
+	MakeFloat2 aPos = a.GetPos();
+	MakeFloat2 bPos = b.GetPos();
+	MakeFloat2 aSize = a.GetSize();
+	MakeFloat2 bSize = b.GetSize();
 
 	// AABB外側判定（衝突していない場合）
 	if (aPos.x >= bPos.x + bSize.x ||    // aがbの右側
@@ -42,15 +42,15 @@ ColRes CollisionRect(const Object& a, const Object& b)
 	return colres;  // 当たっている状態を返す
 }
 
-ColRes CollisionRect(const Object& a, hstd::MakeFloat2& bPos, const hstd::MakeFloat2& bSize)
+ColRes CollisionRect(const Object& a, MakeFloat2& bPos, const MakeFloat2& bSize)
 {
 
 	ColRes colres;
 	colres.hit = false;
 	colres.dir = ColDir::NONE;
 
-	hstd::MakeFloat2 aPos = a.GetPos();
-	hstd::MakeFloat2 aSize = a.GetSize();
+	MakeFloat2 aPos = a.GetPos();
+	MakeFloat2 aSize = a.GetSize();
 
 	// AABB外側判定（衝突していない場合）
 	if (aPos.x >= bPos.x + bSize.x ||    // aがbの右側
@@ -83,7 +83,7 @@ ColRes CollisionRect(const Object& a, hstd::MakeFloat2& bPos, const hstd::MakeFl
 	return colres;  // 当たっている状態を返す
 }
 
-ColRes CollisionRect(const hstd::MakeFloat2& aPos, const hstd::MakeFloat2& aSize, const hstd::MakeFloat2& bPos, const hstd::MakeFloat2& bSize)
+ColRes CollisionRect(const MakeFloat2& aPos, const MakeFloat2& aSize, const MakeFloat2& bPos, const MakeFloat2& bSize)
 {
 	ColRes colres;
 	colres.hit = false;
