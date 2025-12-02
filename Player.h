@@ -1,5 +1,6 @@
 #pragma once
 #include"Character.h"
+#include"Input.h"
 
 enum PlayerState
 {
@@ -16,25 +17,31 @@ enum PlayerState
 
 class Player : public Character
 {
-	protected:
-		int hp;
-		bool isGround;
+private:
+	int hp;
+	bool isGround;
+	bool isJump;
+	bool isBlink;
+	bool isHit;
+	bool isWall;
+	bool isWallJump;
+	bool isDodge;
 
-	private:
-		bool isJump;
-		bool isBlink;
-		bool isHit;
-		bool isWall;
-		bool isWallJump;
-		bool isDodge;
+	Input input;
+	Object player;
 
-	public:
-		void Move();
-		void HitCheck();
-		void Attack();
-		void Blink();
-		void Jump();
-		void WallJump();
-		void GetBlink();
+public:
+
+	void Init()override;
+	void Update()override;
+	void Draw()override;
+	void UnInit()override;
+
+	void Move()override;
+	void Jump()override;
+	void Attack()override;
+
+	void WallJump();
+	void Blink();
+	void GetBlink();
 };
-
