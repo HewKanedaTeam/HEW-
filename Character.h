@@ -4,8 +4,11 @@ class Character
 {
 protected:
 	int hp;
-	bool isGround;
-	bool isNotDamage;
+	float speed;
+	const float gravity = -0.5f;
+
+	bool isGround = false;
+	//bool isNotDamage;
 
 	Object* object;
 
