@@ -2,17 +2,17 @@
 
 void Enemy::Init()
 {
-    Enemy.SetPos(0.0f, 0.0f, 0.0f);
     state = LEFT;          // 初期状態：左向き
-    hp = 1;
-    speed = 1.0f;
-    gravity = 0.5f;
-    isGround = true;
-    isNoDamage = false;
+    hp = 1;                //HPを１に設定
+    speed = 1.0f;          //スピード
+    isGround = true;       //地面と接触しているかどうか
+    isNoDamage = false;    //ダメージをくらってるかどうか
+    Enemy.SetPos(0.0f, 0.0f, 0.0f);   //初期位置
 }
 
 void Enemy::Update()
 {
+
 }
 
 void Enemy::Draw()
@@ -30,11 +30,11 @@ void Enemy::Move()
     switch (state)
     {
     case LEFT:
-        Enemy.SetPos(pos.x -= speed, pos.y = 0, pos.z += 0.0f);
+        Enemy.SetPos(pos.x -= speed, pos.y = 0, pos.z += 0.0f);   //位置情報を更新
         break;
 
     case RIGHT:
-        Enemy.SetPos(pos.x += speed, pos.y = 0, pos.z += 0.0f);
+        Enemy.SetPos(pos.x += speed, pos.y = 0, pos.z += 0.0f);   //位置情報を更新
         break;
 
     default:
