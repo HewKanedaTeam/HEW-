@@ -4,31 +4,48 @@
 
 enum PlayerState
 {
-	STY,
-	BRINK,
-	JUMP,
-	NODAMAGE,
-	STAN,WALL_GRAB,
-	ATTACK,
-	RIGHT,
-	LIGHT,
+	STAY,				//止まっている
+	MOVE,				//移動
+	JUMP,				//ジャンプ
+	ATTACK,				//攻撃
+	STAN,				//気絶
 
+	//NODAMAGE,			//無敵
+	//WALL_GRAB,			//壁に
+	//BRINK,				//ブリンク
+
+};
+
+enum PlayerDirection
+{
+	NONE,				//動きなし
+	RIGHT,				//右
+	LEFT,				//左
 };
 
 class Player : public Character
 {
 private:
-	int hp;
-	bool isGround;
-	bool isJump;
-	bool isBlink;
-	bool isHit;
-	bool isWall;
-	bool isWallJump;
-	bool isDodge;
+	
+	//プレイヤーの状態
+	PlayerState state = STAY;
+	PlayerDirection dir = NONE;
 
+	//ジャンプ関連
+	bool isJump = false;  //ジャンプしているかどうか
+	float jumpPower = 8.0f; //ジャンプ初速
+	float velocityY = 0.0f;  //ジャンプ速度
+	
+	//入力
 	Input input;
 	Object player;
+
+
+	bool isBlink = false;
+	bool isHit = false;
+	bool isWall = false;
+	bool isWallJump = false;
+	bool isDodge = false;
 
 public:
 
